@@ -1,0 +1,100 @@
+.Gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 12px; 
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .artist-row {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+  }
+  
+  .image-wrapper {
+    flex: 1 1 21%;
+    height: 250px;
+    position: relative;
+    margin: 6px; 
+  }
+  
+  .icons-container {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+    display: flex;
+    gap: 5px;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px; 
+    fill: #fff;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .icon:hover {
+    opacity: 1; /* Full opacity on hover */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); 
+  }
+
+  .Gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .caption {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto; /* Adjusted to fit the content width */
+    max-width: calc(100% - 40px); /* Prevents the caption from stretching too wide */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    backdrop-filter: blur(5px); /* Blur effect for glassmorphism */
+    color: white;
+    text-align: center;
+    padding: 8px 10px; /* Padding around the text */
+    font-size: 0.2em; /* Font size of the caption */
+    border-radius: 20px; /* Rounded corners of the caption */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Shadow for depth */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    overflow: hidden;
+    box-sizing: border-box; /* Ensures padding is included in width calculations */
+    font-family: 'Press Start 2P', regular;
+  }
+  
+  .Gallery-add {
+    flex: 0 0 2%; /* Narrow "add more" button */
+    height: 250px; /* Match height of images */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: inset 0 0 10px 0px #d53a9d,
+      inset 0 0 20px 10px #743ad5;
+    color: #d53a9d;
+  }
+
+
+  svg {
+    fill: white;
+    width: 30px;
+    height: 30px;
+  }
+  
+  
+  body {
+    margin: 12px;
+    background: #111;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+  }
+  
